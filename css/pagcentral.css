@@ -1,0 +1,358 @@
+html{
+    scrollbar-width: none;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+}
+.header-container{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fae5d300;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.titulos {
+    display: flex;
+}
+.titulos .risaralda{
+    margin-right: 20%;
+}
+.titulos h2 {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+}
+.barralateral {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculta la barra lateral fuera de la vista */
+    width: 25%;
+    height: 100%;
+    background-color: #FAE5D3;
+    color: rgba(255,255,255,0.8);
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow: scroll;
+    box-shadow: 0 0 10px 5px white;
+
+}
+.barralateral::-webkit-scrollbar{
+    display: none;
+}
+.barralateral.visible {
+    left: 0; /* Muestra la barra lateral */
+}
+.titulo{
+    margin-top: 150px;
+}
+.subtitulo1, .subtitulo2, .subtitulo3{
+    color: gray;
+}
+.uno, .dos, .tres{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.hotel1 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel1, .hotel2, .hotel3, .hotel3, .hotel4, .hotel5, .hotel6, .hotel7, .hotel8{
+    transition: 0.8s;
+}
+.hotel1:hover{
+    font-size: 20px;
+}
+.hotel2 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel2:hover{
+    font-size: 20px;
+}
+.hotel3 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel3:hover{
+    font-size: 20px;
+}
+.hotel4 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel4:hover{
+    font-size: 20px;
+}
+.hotel5 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel5:hover{
+    font-size: 20px;
+}
+.hotel6 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel6:hover{
+    font-size: 20px;
+}
+.hotel7 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    /* transition: 0.5s; */
+}
+.hotel7:hover{
+    font-size: 20px;
+}
+.hotel8 a{
+    /* transition: 0.5s; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.hotel8:hover{
+    font-size: 20px;
+}
+/*contenedor del slider*/
+.slider-container{
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
+}
+/*slider*/
+.slider{
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+
+}
+/*cada slider*/
+.slide{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+img{
+    width: 60%;
+    height: 400px;
+    border-radius: 10px;
+
+}
+
+@keyframes slide{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-66.6%);}
+    100%{transform: translateX(0);}
+}
+
+main {
+    float: right;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    flex-grow: 1;
+    /* padding: 20px 50px; */
+}
+main.shifted {
+    margin-left: 250px; /*Ajusta el margen cuando la barra lateral está visible */
+    /* float: right; */
+}
+.navbar a:hover{
+    color: rgb(94, 165, 61);
+    transition: color 0.3s;
+}
+main img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+#bgimg{
+    float: right;
+}
+.contenedorcards{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.card{
+    margin: 20px 0;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: white ;
+    border-radius: 10px;
+    align-items: center;
+}
+.card img{
+    width: 80%;
+    height: auto;
+}
+.card1{
+    margin-left: 55px;
+}
+.card3 img{
+    height: 150px;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.849);
+    /* animation: sacudir 0.5s; */
+}
+#bold{
+    font-weight: bold;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    position: static;
+    bottom: 0;
+    text-align: center;
+}
+@media (max-width: 823px){
+    .contenedorcards{
+        font-size: 10px;
+    }
+    /* main img{
+        width: auto;
+    } */
+}
+@media (min-width: 418px){
+    .header-container{
+        width: 100%;
+    }
+}
+@media(max-width: 439px){
+    .titulos{
+        font-size: 9px;
+    }
+    .header-container{
+        display: grid;
+        justify-content: center;
+    }
+    .navbar{
+        justify-content: center;
+    }
+    main img{
+        width: auto;
+    }
+}
+@media (max-width: 908px){
+    .card{
+        height: auto;
+    }
+    main img{
+        height: auto;
+        width: auto;
+    }
+    .slide{
+        width: 100%;
+        height: 10%;
+    }
+    .slide2 img{
+        height: 100%;
+    }
+}
+@media (max-width: 908px){
+    /* .slider-container{
+        width: 100%;
+        height: 30%;
+    } */
+    .slide2 img{
+        height: 100%;
+    }
+}
+
+@media (max-width: 770px) {
+    .navbar a {
+        margin: 0 5px;
+    }
+    .barralateral {
+        width: 30%;
+    }
+}
+
+@media (max-width: 608px) {
+    .navbar {
+        font-size: 9px;
+    }
+    .titulos {
+        font-size: 11px;
+    }
+}
+@media (max-width: 512px){
+    .card1{
+        width: 40%;
+    }
+    .card2{
+        margin-left: 10%;
+        width: 40%;
+    }
+    .card3{
+        width: 40%;
+    }
+}
+@media (max-width: 439px){
+    .card1{
+        width: 50%;
+    }
+    .card2{
+        width: 50%;
+    }
+    .card3{
+        width: 50%;
+    }
+}
+@keyframes sacudir{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-3deg);
+    }
+    75%{
+        transform: rotate(3deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
