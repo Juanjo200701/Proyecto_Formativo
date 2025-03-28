@@ -179,14 +179,25 @@ header{
     height: 500px;
 }
 @keyframes slide{
-    0%{transform: translateX(0);}
-    20%{transform: translateX(0);}
-    25%{transform: translateX(-25%);}
-    45%{transform: translateX(-25%);}
-    50%{transform: translateX(-50%);}
-    70%{transform: translateX(-50%);}
-    75%{transform: translateX(-75%);}
-    100%{transform: translateX(-75%);}
+    0% {
+        transform: translateX(0); /* Primera imagen */
+    }
+    33.33% {
+        transform: translateX(0); /* Mantén la primera imagen visible */
+    }
+    38.33% {
+        transform: translateX(-33.33%); /* Segunda imagen */
+    }
+    71.66% {
+        transform: translateX(-33.33%); /* Mantén la segunda imagen visible */
+    }
+    76.66% {
+        transform: translateX(-66.66%); /* Tercera imagen */
+    }
+    100% {
+        transform: translateX(-66.66%); /* Mantén la tercera imagen visible */
+    }
+    
 }
 
 main {
