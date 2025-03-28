@@ -29,7 +29,7 @@ document.getElementById('login').addEventListener('click', () => {
 });
 
 document.getElementById('guest').addEventListener('click', () => {
-    alert('Continuando como invitado...');
+    // alert('Continuando como invitado...');
     // Ocultar el popup
     const popup = document.getElementById('popup');
     popup.classList.add('hidden');

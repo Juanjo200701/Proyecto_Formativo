@@ -9,13 +9,13 @@ body{
 }
 header{
     width: 100%;
-    background-color: #242A2F;
+    background-color: #f9f9f9;
     position: fixed;
     height: 15vh;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    color: white;
+    color: #2c3e50;
     opacity: 0.9;
 }
 .contenedor{
@@ -80,10 +80,10 @@ button a{
 footer{
     position: fixed;
     bottom: 0;
-    background-color: #242A2F;
+    background-color: #f9f9f9;
     width: 100%;
     text-align: center;
-    color: white;
+    color: #2c3e50;
     opacity: 0.8;
 }
 @media (max-width: 442px){
