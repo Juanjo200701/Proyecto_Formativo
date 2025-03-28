@@ -1,5 +1,5 @@
 html{
-    scrollbar-width: none;
+    scrollbar-width: 10px;
 }
 body{
     opacity: 0;
