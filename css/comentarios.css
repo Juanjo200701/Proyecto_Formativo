@@ -1,3 +1,18 @@
+html::-webkit-scrollbar{
+    width: 0px; /* Oculta la barra de desplazamiento horizontal */
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.contenedorTodo{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 .middle-text{
     text-align: center;
 }
@@ -10,14 +25,25 @@
 .ratings{
     cursor: pointer;
 }
+section{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    margin-top: 5rem;
+    padding: 0 2rem;
+}
 .review-content{
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-    margin-top: -4rem;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, auto)); */
+    justify-content: center;
+    gap: 20px;
+    /* margin-top: -4rem; */
 }
 .box{
     box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.849);
-    left: 100px;
+    /* left: 100px; */
     position: relative;
     top: 100px;
     padding: 35px;
@@ -55,6 +81,13 @@
     color: black;
     box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.849);
 }
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
 textarea.input{
     padding: 0.8rem 1.2rem;
     min-height: 150px;
@@ -66,8 +99,9 @@ textarea.input{
     text-decoration: none;
     color: black;
 }
-.ratings a:hover{
-    color: orange;
+.ratings i{
+    color: gray;
+    transition: color 0.3s ease;
 }
 .btn{
     padding: 0.6rem 1.3rem;
