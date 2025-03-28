@@ -13,7 +13,7 @@ window.onload = function(){
 setTimeout(() => {
     const popup = document.getElementById('popup');
     popup.classList.remove('hidden'); // Mostrar el popup
-}, 5000); // 30 segundos
+}, 5000); // 5 segundos
 
 // Manejar los botones del popup
 document.getElementById('register').addEventListener('click', () => {
@@ -23,7 +23,7 @@ document.getElementById('register').addEventListener('click', () => {
 });
 
 document.getElementById('login').addEventListener('click', () => {
-    alert('Redirigiendo a la página de inicio de sesión...');
+    // alert('Redirigiendo a la página de inicio de sesión...');
     // Aquí puedes redirigir a la página de inicio de sesión
     window.location.href = '/login.html';
 });

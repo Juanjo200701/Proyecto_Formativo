@@ -1,5 +1,6 @@
 document.getElementById('btn').addEventListener('click', function(event) {
     event.preventDefault();
+    let carga = document.getElementById('popup')
     let nombre = document.getElementById('username').value;
     let password = document.getElementById('password').value;
     if (nombre === '' || password === '') {
@@ -7,6 +8,7 @@ document.getElementById('btn').addEventListener('click', function(event) {
     } else{
         alert('Bienvenido ' + nombre);
         window.location.href = 'pagcentral.html';
+        carga.classList.add('hidden');
     }
 
 });
