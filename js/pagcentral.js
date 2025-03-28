@@ -5,3 +5,8 @@ document.getElementById('catalogo-link').addEventListener('click', function(even
     document.getElementById('barralateral').classList.toggle('visible');
     document.getElementById('contenido').classList.toggle('shifted');
 });
+let carga = document.getElementById('body');
+window.onload = function(){
+    carga.style.opacity = '1';
+    carga.style.transition = '2s'
+}
