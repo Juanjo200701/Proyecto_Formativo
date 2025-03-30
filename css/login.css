@@ -39,6 +39,9 @@ form{
     position: relative;
     right: 20px;
 }
+input{
+    outline: none;
+}
 label{
     margin-bottom: 5px;
     float: left;

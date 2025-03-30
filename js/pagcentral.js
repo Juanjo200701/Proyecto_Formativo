@@ -10,8 +10,7 @@ setTimeout(()=>{
 boton_si = document.getElementById('si');
 boton_no = document.getElementById('no');
 boton_si.addEventListener('click',function(){
-    pregunta.style.opacity = '0';
-    pregunta.style.transition = '1s';
+    window.location.href = 'pagcentral2.html'
 });
 boton_no.addEventListener('click',function(){
     let popup = document.getElementById('popup');

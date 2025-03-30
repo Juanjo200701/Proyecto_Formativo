@@ -6,7 +6,7 @@ document.getElementById('btn').addEventListener('click', function(event) {
         alert('Por favor, ingrese su nombre de usuario y contraseña');
     } else{
         alert('Bienvenido ' + nombre);
-        window.location.href = 'pagcentral.html';
+        window.location.href = 'pagcentral2.html';
     }
 });
 document.querySelector('form').addEventListener('submit', function(event) {
