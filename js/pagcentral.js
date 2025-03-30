@@ -3,11 +3,21 @@ window.onload = function(){
     carga.style.opacity = '1';
     carga.style.transition = '2s'
 }
-setTimeout(() => {
-    const popup = document.getElementById('popup');
-    popup.classList.remove('hidden'); // Mostrar el popup
-}, 5000); // 5 segundos
-
+setTimeout(()=>{
+    let pregunta = document.getElementById('pregunta');
+    pregunta.style.opacity = '1';
+},6000);
+boton_si = document.getElementById('si');
+boton_no = document.getElementById('no');
+boton_si.addEventListener('click',function(){
+    pregunta.style.opacity = '0';
+    pregunta.style.transition = '2s';
+});
+boton_no.addEventListener('click',function(){
+    let popup = document.getElementById('popup');
+    popup.classList.remove('hidden');
+    pregunta.style.opacity = '0';
+});
 // Manejar los botones del popup
 document.getElementById('register').addEventListener('click', () => {
     alert('Redirigiendo a la página de registro...');
