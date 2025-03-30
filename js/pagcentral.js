@@ -6,7 +6,6 @@ window.onload = function(){
 setTimeout(()=>{
     let pregunta = document.getElementById('pregunta');
     pregunta.style.opacity = '1';
-    pregunta.style.transition = '1s'
 },6000);
 boton_si = document.getElementById('si');
 boton_no = document.getElementById('no');
