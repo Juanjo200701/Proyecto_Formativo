@@ -6,33 +6,38 @@ document.getElementById('btn').addEventListener('click', function(event) {
     let password2 = document.getElementById('password2').value;
     if (nombre === '' || email === '' || password === '' || password2 === '') {
         alert('Por favor, diligencie todos los campos');
-    } else{
-        alert('Bienvenido ' + nombre);
-        window.location.href = 'pagcentral.html';
-    }
-});
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (password !== password2) {
+    }else if (password !== password2){
         alert('Las contraseñas no coinciden');
-    }else{
+    }
+     else{
         alert('Bienvenido ' + nombre);
-        window.location.href = 'pagcentral.html';
+        window.location.href = 'pagcentral2.html';
     }
 });
+// document.querySelector('form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+// });
 let boton = document.getElementById('mostrarContraseña');
 boton.addEventListener('click', function() {
     let password = document.getElementById('password');
-    let password2 = document.getElementById('password2');
-    if (password.type === 'password' && password2.type === 'password') {
+    // let password2 = document.getElementById('password2');
+    if (password.type === 'password') {
         password.type = 'text';
-        password2.type = 'text';
         boton.style.backgroundImage = 'url(../imagenes/ojo.png)';
-
     } else {
         password.type = 'password';
-        password2.type = 'password';
         boton.style.backgroundImage = 'url(../imagenes/cerrar-ojo.png)';
+    }
+});
+let boton2 = document.getElementById('mostrarContraseña2');
+boton2.addEventListener('click', function() {
+    let password2 = document.getElementById('password2');
+    if (password2.type === 'password') {
+        password2.type = 'text';
+        boton2.style.backgroundImage = 'url(../imagenes/ojo.png)';
+    } else {
+        password2.type = 'password';
+        boton2.style.backgroundImage = 'url(../imagenes/cerrar-ojo.png)';
     }
 });
 let formulario = document.getElementById('formulario');
