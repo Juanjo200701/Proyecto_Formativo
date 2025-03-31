@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/pagcentral.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <title>Risarlda Ecoturismo</title>
 </head>
 <body id="body">
@@ -68,25 +72,25 @@
     </div>
     </aside> -->
     <main id="contenido">
-        <div class="slider-container">
-            <div class="intro-text">
-                <h1>Bienvenidos a RisaraldaEcoTurismo</h1>
-                <p>Ofrecemos servicios de ecoturismo para conectar con la naturaleza y disfrutar de experiencias únicas.</p>
-            </div>
-            <div class="slider">
-                <div class="slide slide1">
-                    <img src="imagenes/slideone.jpg" alt="imagen 1">    
-                </div>
-    
-                <div class="slide slide2">
-                    <img src="imagenes/slidetwo.jpg" alt="imagen 1">   
-                </div>
-    
-                <div class="slide slide3">
-                    <img src="imagenes/slidethree.jpg" alt="imagen 1">
-                </div>
-            </div>
-        </div>
+        <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="imagenes/slideone.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="imagenes/slidetwo.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="imagenes/slidethree.jpg" alt=""></div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+  </div>
         <!-- <div class="contenedorcards">
             <div class="card card1"><a href="https://shorturl.at/Stst2">
                 <img src="imagenes/ukumari1.jpg" alt="">
@@ -117,7 +121,40 @@
 <footer>
     <p>© 2025 Risaralda EcoTurismo</p>
 </footer>
+
+
+
 <script text="text/javascript"  src="js/pagcentral.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+  </script>
 </body>
 </html>
