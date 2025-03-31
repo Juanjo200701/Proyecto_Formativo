@@ -135,17 +135,18 @@ header{
     transition: background-color 0.3s, color 0.3s;
 }
 .menu-desplegable {
+    opacity: 0;
     position: absolute;
     top: 100%; /* Aparece justo debajo del enlace "Lugares" */
     left: 0;
     background-color: #ffffff; /* Fondo blanco */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
     flex-direction: column; /* Alinea las opciones verticalmente */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
     width: 200px; /* Ancho del menú desplegable */
     height: 150px;
     line-height: 30px;
+    border-radius: 10px;
 }
 
 /* Opciones del menú */

@@ -38,12 +38,14 @@ lugaresLink.addEventListener('click', function () {
     let menu = document.getElementById('menu-desplegable');
 
     // Alternar la visibilidad del menú
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none'; // Ocultar el menú si está visible
+    if (menu.style.opacity === '1') {
+        menu.style.opacity = '0'; // Ocultar el menú si está visible
+        menu.style.transition = '0.5s';
         lugaresLink.style.backgroundColor = 'white'; // Restablecer el color de fondo
         lugaresLink.style.color = '#34495e'; // Restablecer el color del texto
     } else {
-        menu.style.display = 'block'; // Mostrar el menú si está oculto
+        menu.style.opacity = '1'; // Mostrar el menú si está oculto
+        menu.style.transition = '0.5s';
     }
 });
 lugaresLink.addEventListener('mouseover', function () {
