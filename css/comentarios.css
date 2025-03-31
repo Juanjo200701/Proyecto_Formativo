@@ -63,6 +63,8 @@ section{
 .comentaarios{
     position: relative;
     top: 120px;
+    text-align: center;
+    justify-content: center;
 }
 .input{
     width: 100%;
@@ -86,6 +88,7 @@ section{
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    margin-right: 10%;
 
 }
 textarea.input{
@@ -115,7 +118,9 @@ textarea.input{
     cursor: pointer;
     transition: 0.3s;
     margin: 0;
-    margin-left: 7.5%;
+    /* margin-left: 7.5%; */
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .btn:hover{
     transform: scale(1.1);
