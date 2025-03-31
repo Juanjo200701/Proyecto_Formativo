@@ -1,3 +1,6 @@
+body{
+    font-family: sans-serif;
+}
 html{
     scrollbar-width: none;
 }
@@ -38,7 +41,7 @@ h1{
     transition: transform 0.3s;
     border-radius: 10px;
     border: 1px solid black;
-    padding: 8px;
+    padding: 10px 20px;
     margin-bottom: 30px;
 }
 .volver a{
@@ -48,9 +51,8 @@ h1{
 .volver:hover{
     border: 1px solid black;
     transform: scale(1.2);
-    background-color: rgb(214, 214, 231);
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 footer{
     background-color: black;

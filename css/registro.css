@@ -1,6 +1,11 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    background-image: url(../imagenes/paisaje3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* background-position: center; */
     /* background-image: url(../imagenes/paisaje.jpg);
     background-size: cover;
     background-attachment: fixed;

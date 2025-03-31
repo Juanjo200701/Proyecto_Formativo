@@ -19,20 +19,38 @@ boton_no.addEventListener('click',function(){
 });
 // Manejar los botones del popup
 document.getElementById('register').addEventListener('click', () => {
-    alert('Redirigiendo a la página de registro...');
-    // Aquí puedes redirigir a la página de registro
     window.location.href = '/registro.html';
 });
 
 document.getElementById('login').addEventListener('click', () => {
-    // alert('Redirigiendo a la página de inicio de sesión...');
-    // Aquí puedes redirigir a la página de inicio de sesión
     window.location.href = '/login.html';
 });
 
 document.getElementById('guest').addEventListener('click', () => {
-    // alert('Continuando como invitado...');
     // Ocultar el popup
     const popup = document.getElementById('popup');
     popup.classList.add('hidden');
+});
+let lugaresLink = document.getElementById('lugares-link');
+lugaresLink.addEventListener('click', function () {
+    this.style.backgroundColor = '#27ae60'; // Cambia el color de fondo al hacer clic
+    this.style.color = '#fff'; // Cambia el color del texto al hacer clic
+    let menu = document.getElementById('menu-desplegable');
+
+    // Alternar la visibilidad del menú
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'; // Ocultar el menú si está visible
+        lugaresLink.style.backgroundColor = 'white'; // Restablecer el color de fondo
+        lugaresLink.style.color = '#34495e'; // Restablecer el color del texto
+    } else {
+        menu.style.display = 'block'; // Mostrar el menú si está oculto
+    }
+});
+lugaresLink.addEventListener('mouseover', function () {
+    this.style.backgroundColor = '#2ecc71'; // Cambia el color de fondo al pasar el mouse
+    this.style.color = '#fff'; // Cambia el color del texto al pasar el mouse
+});
+lugaresLink.addEventListener('mouseout', function () {
+    this.style.backgroundColor = 'white'; // Restablecer el color de fondo al salir el mouse
+    this.style.color = '#34495e'; // Restablecer el color del texto al salir el mouse
 });
