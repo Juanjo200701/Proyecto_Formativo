@@ -12,6 +12,40 @@ body{
     /* color: #333; */
     background-color: #f9f9f9;
 }
+.cookies-container{
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cookies-contenido{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+.cookies-contenido button{
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.cookies-contenido button:hover{
+    background-color: #27ae60;
+}
 .pregunta{
     position: fixed;
     top: 0;
