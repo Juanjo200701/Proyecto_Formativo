@@ -34,6 +34,7 @@ img{
     grid-template-columns: 1fr 1fr 1fr;
     width: 80vw;
     gap: 100px;
+    row-gap: 1px;
 }
 .card{
     background-color: #ebf7e2bd;
@@ -46,6 +47,10 @@ img{
     height: auto;
     box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.205);
     transition: .05s ease-in-out;
+}
+.ubicacionn{
+    position: relative;
+    top: 15px;
 }
 .card:hover{
     transform: scale(1.02);
