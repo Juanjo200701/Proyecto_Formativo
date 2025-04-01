@@ -3,19 +3,26 @@ window.onload = function(){
     carga.style.opacity = '1';
     carga.style.transition = '2s'
 }
-setTimeout(()=>{
+// setTimeout(()=>{
+//     let pregunta = document.getElementById('pregunta');
+//     pregunta.style.display = 'block';
+//     // pregunta.style.opacity = '1';
+// },6000);
+setTimeout(() => {
     let pregunta = document.getElementById('pregunta');
-    pregunta.style.opacity = '1';
-},6000);
-boton_si = document.getElementById('si');
-boton_no = document.getElementById('no');
+    pregunta.style.display = 'block';
+    pregunta.style.display = 'flex';
+}, 5000);
+let = boton_si = document.getElementById('si');
+let = boton_no = document.getElementById('no');
 boton_si.addEventListener('click',function(){
     window.location.href = 'pagcentral2.html'
 });
 boton_no.addEventListener('click',function(){
     let popup = document.getElementById('popup');
     popup.classList.remove('hidden');
-    pregunta.style.opacity = '0';
+    let pregunta = document.getElementById('pregunta');
+    pregunta.style.display = 'none';
 });
 // Manejar los botones del popup
 document.getElementById('register').addEventListener('click', () => {
