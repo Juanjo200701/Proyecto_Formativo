@@ -52,6 +52,19 @@ img{
     position: relative;
     top: 15px;
 }
+.ubicacion{
+    transition: transform 0.3s;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+.ubicacion:hover{
+    border: 1px solid rgba(58, 55, 55, 0.295);
+    transform: scale(1.09);
+    background-color: rgb(110, 109, 109);
+    color: white;
+}
 .card:hover{
     transform: scale(1.02);
 }
