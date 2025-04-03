@@ -1,0 +1,18 @@
+header{
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header-container{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fae5d300;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+}
