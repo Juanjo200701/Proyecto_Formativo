@@ -8,11 +8,22 @@ window.onload = function(){
 //     pregunta.style.display = 'block';
 //     // pregunta.style.opacity = '1';
 // },6000);
-setTimeout(() => {
-    let pregunta = document.getElementById('pregunta');
-    pregunta.style.display = 'block';
-    pregunta.style.display = 'flex';
-}, 5000);
+let aceptar = document.getElementById('aceptar');
+let rechazar = document.getElementById('rechazar');
+let cookies = document.getElementById('cookies');
+let contacto = document.getElementById('contacto');
+aceptar.addEventListener('click',function(){
+    cookies.style.display = 'none';
+    setTimeout(() => {
+        let pregunta = document.getElementById('pregunta');
+        pregunta.style.display = 'block';
+        pregunta.style.display = 'flex';
+    }, 5000);
+});
+rechazar.addEventListener('click',function(){
+    cookies.style.display = 'none';
+    contacto.style.display = 'none';
+});
 let = boton_si = document.getElementById('si');
 let = boton_no = document.getElementById('no');
 boton_si.addEventListener('click',function(){
