@@ -22,6 +22,14 @@ body,input,textarea{
     align-items: center;
     justify-content: center;
 }
+.information a{
+  text-decoration: none;
+  color: #555;
+}
+.information a:hover{
+  color:#27ae60;
+  text-decoration: underline;
+}
 .form{
     width: 100%;
     max-width: 820px;
@@ -294,6 +302,9 @@ textarea.input{
 }
 /*RESPONSIVE*/
 @media (max-width: 850px) {
+  .container{
+    max-height: 150vh;
+  }
     .form {
       grid-template-columns: 1fr;
     }
