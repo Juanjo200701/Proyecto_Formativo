@@ -71,6 +71,6 @@ lugaresLink.addEventListener('mouseover', function () {
     this.style.color = '#fff'; // Cambia el color del texto al pasar el mouse
 });
 lugaresLink.addEventListener('mouseout', function () {
-    this.style.backgroundColor = 'white'; // Restablecer el color de fondo al salir el mouse
+    this.style.backgroundColor = 'rgba(255,255,255,0.01)'; // Restablecer el color de fondo al salir el mouse
     this.style.color = '#34495e'; // Restablecer el color del texto al salir el mouse
 });

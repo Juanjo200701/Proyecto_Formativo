@@ -5,6 +5,7 @@ html{
 body{
     opacity: 0;
     margin: 0;
+    padding: 0;
     font-family: poppins;
     display: flex;
     flex-direction: column;
@@ -126,6 +127,9 @@ body{
 /* Ocultar el popup inicialmente */
 .hidden {
     display: none;
+}
+.logo-principal{
+    display: flex;
 }
 header{
     width: 100%;
@@ -295,19 +299,25 @@ header{
     font-size: 20px;
 }
 main{
+    height: 85vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+    padding: 0;
     /* opacity: 0; */
     background-color: #f9f9f9 !important;
 }
 /*contenedor del slider*/
-.slider-container{
-    /* opacity: 0; */
-    width: 95%;
-    overflow: hidden;
-    margin: auto;
-    margin-top: 16vh;
-    margin-bottom: 1vh;
+.slider-container {
+    width: 95%; /* Ocupa todo el ancho del main */
+    height: 100%; /* Ocupa todo el alto del main */
     position: relative;
-    border-radius: 15px;
+    overflow: hidden;
+    border-radius: 15px; /* Elimina bordes redondeados si no son necesarios */
     background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -351,6 +361,7 @@ main{
 .slider{
     display: flex;
     width: 300%;
+    height: 100%;
     animation: slide 25s infinite alternate ease-in-out;
 
 }
@@ -358,7 +369,7 @@ main{
 .slide{
     width: 100%;
     position: relative;
-    height: 400px;
+    height: 100%;
 }
 .slide img{
     width: 100%;
@@ -385,18 +396,6 @@ main{
         transform: translateX(-66.66%); /* Mantén la tercera imagen visible */
     }
     
-}
-
-main {
-    float: right;
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-    flex-grow: 1;
-    /* padding: 20px 50px; */
-}
-main.shifted {
-    margin-left: 250px; /*Ajusta el margen cuando la barra lateral está visible */
-    /* float: right; */
 }
 .navbar a:hover{
     background-color:  #2ecc71;
