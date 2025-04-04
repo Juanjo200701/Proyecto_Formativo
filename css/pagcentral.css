@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html{
     scrollbar-width: none;
 }
 body{
     opacity: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: poppins;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -130,6 +131,7 @@ header{
     width: 100%;
     z-index: 9999;
     position: fixed;
+    top: 0;
     background-color: rgba(255,255,255,0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -148,9 +150,8 @@ header{
     display: flex;
     color: #2c3e50;
 }
-.titulos .risaralda{
-    margin-right: 20%;
-}
+/* .titulos .risaralda{
+    /* margin-right: 20%; */
 .titulos h2 {
     margin: 0;
 }
@@ -322,9 +323,9 @@ main{
 }
 .intro-text {
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff; /* Texto blanco */
     z-index: 10; /* Asegura que el texto esté encima del slider */
@@ -471,107 +472,186 @@ footer a{
 footer a:hover{
     text-decoration: underline;
 }
-@media (max-width: 768px){
-    .card{
-        width: 90%;
-        margin: 10px auto;
+/* Media query para pantallas de hasta 908px */
+/* @media (max-width: 908px) { */
+    /* .card { */
+        /* height: auto; Ajusta la altura de las tarjetas */
+    /* } */
+    /* main img { */
+        /* height: auto; */
+        /* width: auto; Asegura que las imágenes mantengan sus proporciones */
+    /* } */
+    /* .slide { */
+        /* width: 100%; */
+        /* height: auto; Ajusta la altura del slider */
+    /* } */
+    /* .slide2 img { */
+        /* height: 100%; Asegura que las imágenes llenen el contenedor */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 823px */
+/* @media (max-width: 823px) { */
+    /* .contenedorcards { */
+        /* font-size: 10px; Reduce el tamaño de fuente en las tarjetas */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 770px */
+/* @media (max-width: 770px) { */
+    /* .navbar a { */
+        /* margin: 0 5px; Reduce el margen entre los enlaces del navbar */
+    /* } */
+    /* .barralateral { */
+        /* width: 30%; Ajusta el ancho de la barra lateral */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 768px */
+/* @media (max-width: 768px) { */
+    /* .card { */
+        /* width: 90%; Ajusta el ancho de las tarjetas */
+        /* margin: 10px auto; Centra las tarjetas */
+    /* } */
+    /* .slider-container { */
+        /* width: 100%; Asegura que el slider ocupe todo el ancho */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 608px */
+/* @media (max-width: 608px) { */
+    /* .intro-text h1 { */
+        /* font-size: 30px; Reduce el tamaño del texto principal */
+    /* } */
+    /* .navbar { */
+        /* font-size: 9px; Reduce el tamaño de fuente del navbar */
+    /* } */
+    /* .titulos { */
+        /* font-size: 11px; Reduce el tamaño de los títulos */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 550px */
+/* @media (max-width: 550px) { */
+    /* .intro-text h1 { */
+        /* font-size: 20px; Ajusta el tamaño del texto principal */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 512px */
+/* @media (max-width: 512px) { */
+    /* .card1, .card2, .card3 { */
+        /* width: 40%; Ajusta el ancho de las tarjetas */
+    /* } */
+    /* .card2 { */
+        /* margin-left: 10%; Centra la tarjeta 2 */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 439px */
+/* @media (max-width: 439px) { */
+    /* footer { */
+        /* font-size: 10px; Ajusta el tamaño de fuente del footer */
+    /* } */
+    /* .titulos { */
+        /* margin-right: 0%; */
+        /* font-size: 9px; Reduce el tamaño de los títulos */
+    /* } */
+    /* .header-container { */
+        /* display: grid; */
+        /* justify-content: center; Centra el contenido del header */
+    /* } */
+    /* .navbar { */
+        /* justify-content: center; Centra los enlaces del navbar */
+    /* } */
+    /* main img { */
+        /* width: auto; Asegura que las imágenes mantengan sus proporciones */
+    /* } */
+    /* .card1, .card2, .card3 { */
+        /* width: 50%; Ajusta el ancho de las tarjetas */
+    /* } */
+/* } */
+
+/* Media query para pantallas de hasta 300px */
+/* @media (max-width: 300px) { */
+    /* .header-container { */
+        /* height: auto; Ajusta la altura del header */
+    /* } */
+    /* footer { */
+        /* font-size: 8px; Reduce el tamaño de fuente del footer */
+    /* } */
+/* } */
+/* Estilo base (para pantallas grandes) */
+/* Media query para pantallas de hasta 1024px (tablets grandes) */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; /* Ajusta el ancho de las tarjetas */
     }
-    .slider-container{
-        width: 100%;
+    .intro-text h1 {
+        font-size: 2rem; /* Reduce el tamaño del texto principal */
     }
 }
-@media (max-width: 823px){
-    .contenedorcards{
-        font-size: 10px;
+
+/* Media query para pantallas de hasta 768px (tablets pequeñas) */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Las tarjetas ocupan todo el ancho */
+        margin: 10px auto; /* Centra las tarjetas */
     }
-    /* main img{
-        width: auto;
-    } */
+    .slider-container {
+        width: 100%; /* El slider ocupa todo el ancho */
+    }
+    .intro-text h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del texto principal */
+    }
+    .intro-text p {
+        font-size: 1rem; /* Reduce el tamaño del texto secundario */
+    }
 }
-@media (min-width: 418px){
-    .header-container{
-        width: 100%;
-    }
-}
-@media(max-width: 439px){
-    .titulos{
-        font-size: 9px;
-    }
+
+/* Media query para pantallas de hasta 600px (smartphones grandes) */
+@media (max-width: 600px) {
     .header-container{
         display: grid;
         justify-content: center;
     }
-    .navbar{
-        justify-content: center;
-    }
-    main img{
-        width: auto;
-    }
-}
-@media (max-width: 908px){
-    .card{
-        height: auto;
-    }
-    main img{
-        height: auto;
-        width: auto;
-    }
-    .slide{
-        width: 100%;
-        height: 10%;
-    }
-    .slide2 img{
-        height: 100%;
-    }
-}
-@media (max-width: 908px){
-    /* .slider-container{
-        width: 100%;
-        height: 30%;
-    } */
-    .slide2 img{
-        height: 100%;
-    }
-}
-
-@media (max-width: 770px) {
-    .navbar a {
-        margin: 0 5px;
-    }
-    .barralateral {
-        width: 30%;
-    }
-}
-
-@media (max-width: 608px) {
     .navbar {
-        font-size: 9px;
+        font-size: 12px; /* Reduce el tamaño de fuente del navbar */
     }
-    .titulos {
-        font-size: 11px;
+    .intro-text h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del texto principal */
     }
-}
-@media (max-width: 512px){
-    .card1{
-        width: 40%;
+    .intro-text p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto secundario */
     }
-    .card2{
-        margin-left: 10%;
-        width: 40%;
-    }
-    .card3{
-        width: 40%;
+    footer {
+        font-size: 12px; /* Ajusta el tamaño de fuente del footer */
     }
 }
-@media (max-width: 439px){
-    .card1{
-        width: 50%;
+
+/* Media query para pantallas de hasta 480px (smartphones pequeños) */
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.2rem; /* Reduce aún más el tamaño del texto principal */
     }
-    .card2{
-        width: 50%;
+    .intro-text p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto secundario */
     }
-    .card3{
-        width: 50%;
+    footer {
+        font-size: 10px; /* Reduce el tamaño de fuente del footer */
+    }
+}
+
+/* Media query para pantallas de hasta 320px (smartphones muy pequeños) */
+@media (max-width: 320px) {
+    .intro-text h1 {
+        font-size: 1rem; /* Ajusta el tamaño del texto principal */
+    }
+    .intro-text p {
+        font-size: 0.7rem; /* Ajusta el tamaño del texto secundario */
+    }
+    footer {
+        font-size: 8px; /* Ajusta el tamaño de fuente del footer */
     }
 }
 @keyframes sacudir{
@@ -589,10 +669,5 @@ footer a:hover{
     }
     100%{
         transform: rotate(0deg);
-    }
-}
-@media (max-width: 300px){
-    .header-container{
-        height: auto;
     }
 }
