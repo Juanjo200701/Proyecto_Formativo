@@ -131,12 +131,15 @@ body{
 .logo-principal{
     display: flex;
 }
+.logo-principal img{
+    margin-right: 10px;
+}
 header{
     width: 100%;
     z-index: 9999;
     position: fixed;
     top: 0;
-    background-color: rgba(255,255,255,0.9);
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -149,6 +152,9 @@ header{
     color: rgb(0, 0, 0);
     padding: 10px;
     box-sizing: border-box;
+}
+.risaralda{
+    color:#2c3e50;
 }
 .titulos {
     display: flex;
