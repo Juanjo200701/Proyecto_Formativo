@@ -303,7 +303,7 @@ textarea.input{
 /*RESPONSIVE*/
 @media (max-width: 850px) {
   .container{
-    max-height: 150vh;
+    max-height: 150vh !important;
   }
     .form {
       grid-template-columns: 1fr;

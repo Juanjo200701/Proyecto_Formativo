@@ -40,6 +40,7 @@ body{
     padding: 10px 20px;
     margin: 10px;
     background-color: #2ecc71;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -76,6 +77,7 @@ body{
     padding:  10px  20px;
     margin: 10px;
     background-color: #2ecc71;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -181,7 +183,7 @@ header{
     transition: background-color 0.3s, color 0.3s;
 }
 .menu-desplegable {
-    opacity: 0;
+    display: none;
     position: absolute;
     top: 100%; /* Aparece justo debajo del enlace "Lugares" */
     left: 0;
@@ -369,7 +371,7 @@ main{
     width: 300%;
     height: 100%;
     animation: slide 25s infinite alternate ease-in-out;
-
+    
 }
 /*cada slider*/
 .slide{
@@ -460,6 +462,7 @@ footer{
     background-color: rgba(255,255,255,0.9);
     color: #2c3e50;
     padding: 20px 0;
+    height: 10vh;
     width: 100%;
     line-height: 0.5;
     font-size: 14px;
@@ -613,15 +616,23 @@ footer a:hover{
         font-size: 1rem; /* Reduce el tamaño del texto secundario */
     }
 }
-
-/* Media query para pantallas de hasta 600px (smartphones grandes) */
-@media (max-width: 600px) {
+@media (max-width: 659px){
     .header-container{
         display: grid;
         justify-content: center;
+        height: auto;
     }
+}
+
+/* Media query para pantallas de hasta 600px (smartphones grandes) */
+@media (max-width: 600px) {
+    /* .header-container{
+        display: grid;
+        justify-content: center;
+    } */
     .navbar {
         font-size: 12px; /* Reduce el tamaño de fuente del navbar */
+        margin-left: 50px;
     }
     .intro-text h1 {
         font-size: 1.5rem; /* Reduce el tamaño del texto principal */
@@ -646,7 +657,14 @@ footer a:hover{
         font-size: 10px; /* Reduce el tamaño de fuente del footer */
     }
 }
-
+@media (max-width: 382px){
+    .risaralda{
+        font-size: 20px;
+    }
+    .logo-principal img{
+        width: 50px;
+    }
+}
 /* Media query para pantallas de hasta 320px (smartphones muy pequeños) */
 @media (max-width: 320px) {
     .intro-text h1 {
@@ -657,22 +675,5 @@ footer a:hover{
     }
     footer {
         font-size: 8px; /* Ajusta el tamaño de fuente del footer */
-    }
-}
-@keyframes sacudir{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(3deg);
-    }
-    50%{
-        transform: rotate(-3deg);
-    }
-    75%{
-        transform: rotate(3deg);
-    }
-    100%{
-        transform: rotate(0deg);
     }
 }
