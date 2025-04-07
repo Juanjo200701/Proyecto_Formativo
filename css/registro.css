@@ -23,6 +23,7 @@ header{
     display: flex;
     color: #2c3e50;
     opacity: 0.9;
+    z-index: 1000;
 }
 .contenedor{
     display: grid;
@@ -44,6 +45,17 @@ form{
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     position: relative;
     right: 20px;
+    color: #2c3e50;
+}
+form a{
+    position: relative;
+    left: 28%;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 0.8rem;
+}
+form a:hover{
+ text-decoration: underline;
 }
 input{
     outline: none;
@@ -56,11 +68,17 @@ label{
     margin-bottom: 5px;
 }
 #btn{
+    background-color: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
     margin-top: 15px;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 #btn:hover{
+    background-color: #27ae50;
     box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.10);
 }
