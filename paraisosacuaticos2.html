@@ -10,6 +10,9 @@
 <body>
     <div class="contenedorTodo">
         <h1>Paraísos Acuáticos</h1>
+        <button id="mostrar-favoritos" class="mostrar-favoritos">
+            Favoritos (<span id="contador-favoritos">0</span>)
+        </button>
 
         <!-- Contenedor principal de tarjetas -->
         <div class="contenedor">
@@ -18,11 +21,16 @@
                 <div class="card">
                     <img src="imagenes/Lago.jpeg" alt="Lago de La Pradera">
                     <h4>Lago De La Pradera</h4>
-                    <p>El Lago de La Pradera es un lago artificial en Dosquebradas, Colombia, que se ha convertido en un popular espacio de recreación y esparcimiento.</p>
-                    <a href="https://maps.app.goo.gl/M6RgB1GUYqJwGdGfA">
-                        <button class="ubicacion ubicacionn">Ubicación</button>
+                    <p>El Lago de La Pradera es un lago artificial en Dosquebradas, Colombia, que se ha convertido en un popular espacio de recreación y esparcimiento. aaaa aa aa a a aa a a a a a akdfdkfndklfndlfnk</p>
+                    <!-- <a class="ubication" href="https://maps.app.goo.gl/M6RgB1GUYqJwGdGfA">🗺️</a> -->
+                    <button class="ubication-button"><a href="https://maps.app.goo.gl/M6RgB1GUYqJwGdGfA">
+
+                        <img src="./imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="Ubicación"></button>
                     </a>
-                    <button class="favorito favoritoo" data-lugar="Lago De La Pradera">🤍</button>
+                    <a href="#">
+                        <button class="ubicacion ubicacionn">Más Info</button>
+                    </a>
+                    <button id="favorito" class="favorito favoritoo" data-lugar="Lago De La Pradera">🤍</button>
                 </div>
 
                 <!-- Tarjeta 2 -->
@@ -30,10 +38,15 @@
                     <img src="imagenes/laguna.jpg" alt="Laguna del Otún">
                     <h4>La Laguna Del Otún</h4>
                     <p>La Laguna del Otún es un embalse natural en el Parque Nacional Natural Los Nevados, en Colombia. Es un atractivo turístico y un humedal Ramsar que se alimenta del deshielo del nevado Santa Isabel.</p>
-                    <a href="https://maps.app.goo.gl/ndHDFrHHQYfNt8n19">
-                        <button class="ubicacion">Ubicación</button>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/ndHDFrHHQYfNt8n19">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion">Más Info</button>
                     </a>
-                    <button class="favorito" data-lugar="La Laguna Del Otún">🤍</button>
+                    <button id="favorito" class="favorito" data-lugar="La Laguna Del Otún">🤍</button>
                 </div>
 
                 <!-- Tarjeta 3 -->
@@ -41,10 +54,15 @@
                     <img src="imagenes/lolo.jpg" alt="Chorros de Don Lolo">
                     <h4>Chorros De Don Lolo</h4>
                     <p>Los Chorros de Don Lolo son una cascada de 40 metros de altura en Santa Rosa de Cabal, Risaralda, Colombia. Se encuentran en un bosque húmedo secundario y son un destino popular para los amantes de la naturaleza.</p>
-                    <a href="https://maps.app.goo.gl/iraGYyGvchLDCFaj8">
-                        <button class="ubicacion">Ubicación</button>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/iraGYyGvchLDCFaj8">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion">Más Info</button>
                     </a>
-                    <button class="favorito" data-lugar="Chorros De Don Lolo">🤍</button>
+                    <button id="favorito" class="favorito" data-lugar="Chorros De Don Lolo">🤍</button>
                 </div>
 
                 <!-- Tarjeta 4 -->
@@ -52,10 +70,15 @@
                     <img src="imagenes/termaales.jpg" alt="Termales de Santa Rosa">
                     <h4>Termales de Santa Rosa</h4>
                     <p>Los Termales Santa Rosa de Cabal son un destino turístico en Risaralda, Colombia, famoso por sus aguas termales naturales. El complejo está formado por el Termales Hotel y el Termales Balneario.</p>
-                    <a href="https://maps.app.goo.gl/zTkAVYrmFBmFvJCv7">
-                        <button class="ubicacion">Ubicación</button>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/zTkAVYrmFBmFvJCv7">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;"alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion">Más Info</button>
                     </a>
-                    <button class="favorito" data-lugar="Termales de Santa Rosa">🤍</button>
+                    <button id="favorito" class="favorito" data-lugar="Termales de Santa Rosa">🤍</button>
                 </div>
 
                 <!-- Tarjeta 5 -->
@@ -63,40 +86,59 @@
                     <img src="imagenes/parquecafe.jpg" alt="Parque Metropolitano del Café">
                     <h4>Parque Metropolitano del Café</h4>
                     <p>El Parque Metropolitano del Café en Pereira, Colombia, es un parque acuático y deportivo rodeado de vegetación. Es un destino ideal para pasar el día en familia o con amigos.</p>
-                    <a href="https://maps.app.goo.gl/2ZBVKPdNQmpVnmDq9">
-                        <button class="ubicacion">Ubicación</button>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/2ZBVKPdNQmpVnmDq9">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion">Más Info</button>
                     </a>
-                    <button class="favorito" data-lugar="Parque Metropolitano del Café">🤍</button>
+                    <button id="favorito" class="favorito" data-lugar="Parque Metropolitano del Café">🤍</button>
                 </div>
 
                 <!-- Tarjeta 6 -->
                 <div class="card">
                     <img src="imagenes/consota.jpg" alt="Parque Acuático Consota">
-                    <h4>Parque Acuático Consota</h4>
-                    <p>Consotá es un parque recreativo y cultural ubicado en la región cafetera colombiana. Cuenta con piscinas, bolera, senderos, canchas deportivas, alojamiento, y una granja de animales.</p>
-                    <a href="https://maps.app.goo.gl/Xe4dhpqnBSzML98b8">
-                        <button class="ubicacion ubicacionn">Ubicación</button>
+                    <h4 class="consota">Parque Acuático Consota</h4>
+                    <p>Consotá es un parque recreativo y cultural ubicado en la región cafetera colombiana. Cuenta con piscinas, bolera, senderos, canchas deportivas, alojamiento, y una granja de animales. </p>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/Xe4dhpqnBSzML98b8">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion ubicacionn">Más Info</button>
                     </a>
-                    <button class="favorito favoritoo" data-lugar="Parque Acuático Consota">🤍</button>
+                    <button id="favorito" class="favorito favoritoo" data-lugar="Parque Acuático Consota">🤍</button>
                 </div>
 
                 <!-- Tarjeta 7 -->
                 <div class="card">
                     <img src="imagenes/farallones.jpeg" alt="Balneario Los Farallones">
-                    <h4>Balneario Los Farallones</h4>
-                    <p>El balneario Los Farallones es un centro recreativo de la Virginia, Risaralda. Este balneario ofrece una variedad de instalaciones y servicios diseñados para el disfrute de toda la familia.</p>
-                    <a href="https://maps.app.goo.gl/XbZoEF6SsNpzKCL88">
-                        <button class="ubicacion ubicacionn">Ubicación</button>
+                    <h4 class="consota2">Balneario Los Farallones</h4>
+                    <p>El balneario Los Farallones es un centro recreativo de la Virginia, Risaralda. Este balneario ofrece una variedad de instalaciones y servicios diseñados para el disfrute de toda la familia. </p>
+                    <button class="ubication-button">
+                        <a href="https://maps.app.goo.gl/XbZoEF6SsNpzKCL88">
+                            <img src="imagenes/mapa2.svg" style="width: 32px !important; height: 32px !important;" alt="">
+                        </a>
+                    </button>
+                    <a href="#">
+                        <button class="ubicacion ubicacionn">Más Info</button>
                     </a>
-                    <button class="favorito favoritoo" data-lugar="Balneario Los Farallones">🤍</button>
+                    <button id="favorito" class="favorito favoritoo" data-lugar="Balneario Los Farallones">🤍</button>
                 </div>
             </div>
         </div>
 
         <!-- Contenedor de favoritos -->
-        <div class="favoritos-container">
-            <h2>Mis Favoritos</h2>
-            <ul id="favoritos-list"></ul>
+        <div id="popup-favoritos" class="popup hidden">
+            <div class="popup-content">
+                <button id="cerrar-popup" class="cerrar-popup">X</button>
+                <h2>Mis Favoritos</h2>
+                <ul id="favoritos-list"></ul>
+                <p id="mensaje-vacio" class="hidden">No has agregado ningún lugar aún.</p>
+            </div>
         </div>
 
         <!-- Botón de volver -->
