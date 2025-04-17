@@ -11,11 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
         favoritos.forEach((lugar) => {
             const li = document.createElement('li');
             li.textContent = lugar;
-            listaFavoritos.appendChild(li);
+
+            // Crear botón de eliminar con ícono de basura
+            const botonEliminar = document.createElement('button');
+            botonEliminar.innerHTML = '🗑️'; // Ícono de basura
+            botonEliminar.classList.add('eliminar-favorito');
+            botonEliminar.addEventListener('click', () => {
+                const index = favoritos.indexOf(lugar);
+                if (index !== -1) {
+                    favoritos.splice(index, 1); // Eliminar el lugar de la lista
+                    localStorage.setItem('favoritos', JSON.stringify(favoritos)); // Actualizar localStorage
+                    mostrarFavoritos(); // Actualizar la lista en la página
+                }
+            });
+
+            li.appendChild(botonEliminar); // Agregar el botón al elemento de la lista
+            listaFavoritos.appendChild(li); // Agregar el elemento a la lista
         });
     };
 
-    // Alternar un lugar en favoritos (agregar o eliminar)
+    // Alternar un lugar en favoritos (agregar o eliminar desde las tarjetas)
     botonesFavorito.forEach((boton) => {
         boton.addEventListener('click', () => {
             const lugar = boton.getAttribute('data-lugar');
