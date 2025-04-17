@@ -12,17 +12,18 @@ let aceptar = document.getElementById('aceptar');
 let rechazar = document.getElementById('rechazar');
 let cookies = document.getElementById('cookies');
 let contacto = document.getElementById('contacto');
+let login = document.getElementById('login')
+let pregunta = document.getElementById('pregunta');
 aceptar.addEventListener('click',function(){
     cookies.style.display = 'none';
-    setTimeout(() => {
-        let pregunta = document.getElementById('pregunta');
-        pregunta.style.display = 'block';
-        pregunta.style.display = 'flex';
-    }, 5000);
 });
 rechazar.addEventListener('click',function(){
     cookies.style.display = 'none';
     contacto.style.display = 'none';
+});
+login.addEventListener('click', ()=>{
+    document.getElementById('pregunta').style.display = 'block';
+    document.getElementById('pregunta').style.display = 'flex';
 });
 let = boton_si = document.getElementById('si');
 let = boton_no = document.getElementById('no');
@@ -40,7 +41,7 @@ document.getElementById('register').addEventListener('click', () => {
     window.location.href = '/registro.html';
 });
 
-document.getElementById('login').addEventListener('click', () => {
+document.getElementById('loggin').addEventListener('click', () => {
     window.location.href = '/login.html';
 });
 
