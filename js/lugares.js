@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         boton.addEventListener('click', () => {
             const lugar = boton.getAttribute('data-lugar');
             const index = favoritos.indexOf(lugar);
+            const animacion = document.querySelectorAll('favorito-activo');
 
             if (index === -1) {
                 // Si el lugar no está en favoritos, agregarlo
