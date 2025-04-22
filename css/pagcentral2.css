@@ -283,10 +283,11 @@ header{
 
 .perfil-opciones {
     padding-top: 10px;
+    transition: all 0.3s ease;
 }
 
 .perfil-opciones a {
-    color: #e74c3c;
+    color: #2c3e50;
     padding: 8px 15px;
 }
 .barralateral {

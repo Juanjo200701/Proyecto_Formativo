@@ -16,7 +16,7 @@ body,input,textarea{
     max-height: 100vh;
     min-height: 100vh;
     /* padding: 2rem; */
-    background-color: #070707;
+    background-color: white;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ body,input,textarea{
     max-width: 820px;
     background-color:#fff;
     border-radius: 10px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
     z-index: 1000;
     overflow: hidden;
     display: grid;
@@ -150,6 +150,7 @@ textarea.input{
     transition: 0.3s;
     margin: 0;
     margin-top: 25px;
+    margin-left: 10px;
 }
 .btn:hover{
     transform: scale(1.1);
@@ -258,7 +259,8 @@ textarea.input{
 #volver{
   position: absolute;
   justify-self: center;
-  margin-top: 100px;
+  margin-top: 97px;
+  margin-left:130px;
   padding: 10px 20px;
   background-color: black;
   border: 2px solid #fafafa;
@@ -303,7 +305,7 @@ textarea.input{
 /*RESPONSIVE*/
 @media (max-width: 850px) {
   .container{
-    max-height: 150vh !important;
+    max-height: 300vh !important;
   }
     .form {
       grid-template-columns: 1fr;
