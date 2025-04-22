@@ -290,6 +290,9 @@ button {
     color: #34495e;
     transition: all 0.3s;
 }
+.card-vacia{
+    opacity: 0;
+}
 #favoritos-list li:hover {
     transform: scale(1.02);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);

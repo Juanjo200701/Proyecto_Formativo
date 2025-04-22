@@ -20,3 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Add this to your existing JavaScript file
+document.addEventListener('DOMContentLoaded', function() {
+    const perfilLink = document.getElementById('perfil-link');
+    const perfilMenu = document.getElementById('perfil-menu');
+
+    perfilLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        perfilMenu.classList.toggle('visible');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!perfilLink.contains(e.target) && !perfilMenu.contains(e.target)) {
+            perfilMenu.classList.remove('visible');
+        }
+    });
+});
