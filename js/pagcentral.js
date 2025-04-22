@@ -20,6 +20,7 @@ aceptar.addEventListener('click',function(){
 rechazar.addEventListener('click',function(){
     cookies.style.display = 'none';
     contacto.style.display = 'none';
+    login.style.display = 'none';
 });
 login.addEventListener('click', ()=>{
     document.getElementById('pregunta').style.display = 'block';

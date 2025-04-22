@@ -190,7 +190,7 @@ button {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     /* overflow: hidden; */
 }
 .card h4{
@@ -230,7 +230,11 @@ button {
     transform: translateX(-50%); /* This centers the button */
     background-color: #2ecc71;
 }
-
+.card:hover{
+    /* transform: translateY(-5px); */
+    transform: scale(1.022);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 .card .favorito {
     right: 15px;
     background: white;
