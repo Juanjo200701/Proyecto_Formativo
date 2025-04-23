@@ -341,10 +341,11 @@ main{
 }
 .intro-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 85%;
+    left: 42%;
+    text-align: left;
     transform: translate(-50%, -50%);
-    text-align: center;
+    /* text-align: center; */
     color: #ffffff; /* Texto blanco */
     z-index: 10; /* Asegura que el texto esté encima del slider */
     /* background-color: rgba(0, 0, 0, 0.5); Fondo semitransparente */
@@ -621,6 +622,11 @@ footer a:hover{
         display: grid;
         justify-content: center;
         height: auto;
+    }
+    .intro-text{
+        top: 50%;
+        left: 50%;
+        text-align: center;
     }
 }
 

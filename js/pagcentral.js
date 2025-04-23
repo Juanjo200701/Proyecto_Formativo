@@ -13,31 +13,15 @@ let rechazar = document.getElementById('rechazar');
 let cookies = document.getElementById('cookies');
 let contacto = document.getElementById('contacto');
 let login = document.getElementById('login')
-let pregunta = document.getElementById('pregunta');
-aceptar.addEventListener('click',function(){
-    cookies.style.display = 'none';
-});
-rechazar.addEventListener('click',function(){
-    cookies.style.display = 'none';
-    contacto.style.display = 'none';
-    login.style.display = 'none';
-});
-login.addEventListener('click', ()=>{
-    document.getElementById('pregunta').style.display = 'block';
-    document.getElementById('pregunta').style.display = 'flex';
-});
-let = boton_si = document.getElementById('si');
-let = boton_no = document.getElementById('no');
-boton_si.addEventListener('click',function(){
-    window.location.href = 'pagcentral2.html'
-});
-boton_no.addEventListener('click',function(){
-    let popup = document.getElementById('popup');
+let popup = document.getElementById('popup');
+
+login.addEventListener('click', (e)=>{
+    e.preventDefault();
+    popup.style.display = 'flex';
     popup.classList.remove('hidden');
-    let pregunta = document.getElementById('pregunta');
-    pregunta.style.display = 'none';
+    // let pregunta = document.getElementById('pregunta');
+    // pregunta.style.display = 'none';
 });
-// Manejar los botones del popup
 document.getElementById('register').addEventListener('click', () => {
     window.location.href = '/registro.html';
 });
@@ -48,9 +32,21 @@ document.getElementById('loggin').addEventListener('click', () => {
 
 document.getElementById('guest').addEventListener('click', () => {
     // Ocultar el popup
-    const popup = document.getElementById('popup');
+    // const popup = document.getElementById('popup');
     popup.classList.add('hidden');
+    popup.style.display = 'none';
 });
+let = boton_si = document.getElementById('si');
+let = boton_no = document.getElementById('no');
+boton_si.addEventListener('click',function(){
+    window.location.href = 'pagcentral2.html'
+});
+boton_no.addEventListener('click',function(){
+    popup.classList.remove('hidden');
+    let pregunta = document.getElementById('pregunta');
+    pregunta.style.display = 'none';
+});
+// Manejar los botones del popup
 // let lugaresLink = document.getElementById('lugares-link');
 // lugaresLink.addEventListener('click', function () {
 //     this.style.backgroundColor = '#27ae60'; // Cambia el color de fondo al hacer clic
