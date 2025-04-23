@@ -134,9 +134,9 @@ body {
     position: relative;
 }
 .btn-remove{
-    background-color: #e74c3c; /* Rojo para el botón de eliminar */
+    background-color: white; /* Rojo para el botón de eliminar */
     color: white;
-    border: none;
+    border: 1px solid #c0392b;
     border-radius: 8px;
     padding: 8px 12px;
     cursor: pointer;
@@ -144,7 +144,8 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 .btn-remove:hover{
-    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+    border: none;
+    background-color: #fd6857; /* Rojo más oscuro al pasar el mouse */
     transform: scale(1.05);
 }
 .favorite-item img {
