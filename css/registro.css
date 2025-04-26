@@ -134,14 +134,30 @@ footer{
     header{
         display: grid;
         height: auto;
+        padding: 10px;
+        text-align: center;
     }
     .contenedor{
-        padding-top: 20vh;
+        padding-top: 15vh;
+        padding-bottom: 2rem;
+        max-height: 80vh;
+        /* height: auto; */
+        /* min-height: 50vh; */
     }
     form{
         right: 0;
-        margin: 0.5rem;
+        margin: 1rem;
+        width: 90%;
+        padding: 15px;
+        max-width: none;
     }
+    form a{
+        /* left: 0; */
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
 }
 @media (min-height: 1009px){
     form{
