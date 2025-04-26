@@ -134,14 +134,12 @@ body {
     position: relative;
 }
 .btn-remove{
-    background-color: white; /* Rojo para el botón de eliminar */
-    color: white;
-    border: 1px solid #c0392b;
+    padding: 2px 4px;
     border-radius: 8px;
-    padding: 8px 12px;
+    border: none;
+    font-size: 1.5em;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: transform 0.3s ease;
 }
 .btn-remove:hover{
     border: none;
@@ -197,6 +195,16 @@ body {
 
 .btn-cambiar:hover {
     background-color: #27ae60;
+}
+#cerrar-sesion{
+    /* background-color: #e74c3c; */
+    color: #2c3e50;
+    border: none;
+    padding: 0.8rem 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 /* Responsive Design */

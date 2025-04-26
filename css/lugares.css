@@ -140,19 +140,38 @@ body {
 }
 
 .cerrar-popup {
+    background-color: white;
+    color:#2d3436;
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
-    border: none;
+    padding: 3px 9px;
+    /* background: none; */
+    /* border: 1px solid #c0392b; */
+    /* border-radius: 8px; */
     font-size: 20px;
     cursor: pointer;
-    color: #2d3436;
     transition: transform 0.3s ease;
+    border: none;
 }
 
 .cerrar-popup:hover {
-    transform: scale(1.2);
+    background: #fd6857;
+    border-radius: 8px;
+    color: white;
+    transform: scale(1.05);
+}
+.eliminar-favorito {
+    padding: 2px 4px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.eliminar-favorito:hover {
+    background: #fd6857;
+    transform: scale(1.05);
 }
 
 /* Favorites Button */
@@ -260,7 +279,21 @@ footer {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.final-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #2d3436;
+    a{
+        color: #2ecc71;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .volver{
