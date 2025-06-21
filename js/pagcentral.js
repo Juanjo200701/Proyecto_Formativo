@@ -23,7 +23,7 @@ login.addEventListener('click', (e)=>{
     // pregunta.style.display = 'none';
 });
 document.getElementById('register').addEventListener('click', () => {
-    window.location.href = '/registro.html';
+    window.location.href = '/Proyecto_Ecoturismo/Proyecto_Formativo/registro.php';
 });
 
 document.getElementById('loggin').addEventListener('click', () => {
