@@ -1,52 +1,57 @@
 <?php
+
 session_start();
 require_once 'conexion.php';
 
+$mensaje = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
     $errores = [];
 
     // Validar que los campos no estén vacíos
     if (empty($username) || empty($password)) {
         $errores[] = "Todos los campos son obligatorios.";
     }
-    // Verificar si el usuario existe
-    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $resultado = $stmt->get_result();
 
-    if ($resultado->num_rows === 0) {
-        $errores[] = "El nombre de usuario no existe.";
-    } else {
-        $usuario = $resultado->fetch_assoc();
-        // Verificar la contraseña
-        if (!password_verify($password, $usuario['password'])) {
-            $errores[] = "Contraseña incorrecta.";
+    // Verificar si el usuario existe solo si no hay errores previos
+    if (empty($errores)) {
+        $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows === 0) {
+            $errores[] = "El nombre de usuario no existe.";
+        } else {
+            $usuario = $resultado->fetch_assoc();
+            // Verificar la contraseña
+            if (!password_verify($password, $usuario['password'])) {
+                $errores[] = "Contraseña incorrecta.";
+            }
         }
+        $stmt->close();
     }
 
     // Si no hay errores, iniciar sesión
-    if (empty($errores)) {
+    if (empty($errores) && isset($usuario)) {
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['username'] = $usuario['username'];
-        echo "Inicio de sesión exitoso. Bienvenido, " . htmlspecialchars($usuario['username']) . "!";
-    }
-    else {
+        $mensaje = "<span style='color:green;'>Inicio de sesión exitoso. Bienvenido, " . htmlspecialchars($usuario['username']) . "!</span>";
+        header("Location: pagcentral2.php");
+        exit;
+    } else {
         foreach ($errores as $error) {
-            echo $error . "<br>";
+            $mensaje .= "<span style='color:red;'>$error</span><br>";
         }
     }
-    $stmt->close();
     $conexion->close();
-    exit;
 }
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,23 +60,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login</title>
 </head>
 <body>
-    <video autoplay loop muted id="video_background" preload="auto" volume="50"/>
-  <source src="/imagenes/Videofondo4.mp4" type="video/mp4" />
-</video>
+    <video autoplay loop muted id="video_background" preload="auto" volume="50">
+        <source src="/imagenes/Videofondo2.mp4" type="video/mp4" />
+    </video>
     <header>
         <h1>Risaralda EcoTurismo</h1>
     </header>
-    </div>
     <div class="contenedor">
         <div class="login">
-            <form id="formulario">
+            <form id="formulario" action="login.php" method="POST">
                 <label for="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username" required>
                 
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
-                <button id="mostrarContraseña"></button>
-                <p><strong>¿Todavía no tienes cuenta?</strong><br><a href="registro.html">Regístrate</a></p>
+                <button type="button" id="mostrarContraseña"></button>
+                <?php if (!empty($mensaje)): ?>
+                    <div><?= $mensaje ?></div>
+                <?php endif; ?>
+                <p><strong>¿Todavía no tienes cuenta?</strong><br><a href="registro.php">Regístrate</a></p>
                 
                 <button id="btn" type="submit">Iniciar sesión</button>
             </form>

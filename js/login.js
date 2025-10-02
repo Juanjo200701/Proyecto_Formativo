@@ -1,17 +1,17 @@
-document.getElementById('btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    let nombre = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-    if (nombre === '' || password === '') {
-        alert('Por favor, ingrese su nombre de usuario y contraseña');
-    } else{
-        alert('Bienvenido ' + nombre);
-        window.location.href = 'pagcentral2.html';
-    }
-});
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-});
+// document.getElementById('btn').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     let nombre = document.getElementById('username').value;
+//     let password = document.getElementById('password').value;
+//     if (nombre === '' || password === '') {
+//         alert('Por favor, ingrese su nombre de usuario y contraseña');
+//     } else{
+//         alert('Bienvenido ' + nombre);
+//         window.location.href = 'pagcentral2.html';
+//     }
+// });
+// document.querySelector('form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+// });
 let boton = document.getElementById('mostrarContraseña');
 boton.addEventListener('click', function() {
     let password = document.getElementById('password');

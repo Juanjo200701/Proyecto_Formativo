@@ -1,5 +1,33 @@
+<?php
+session_start();
+require_once 'conexion.php';
+
+// Verifica que el usuario esté logueado
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$usuario_id = $_SESSION['usuario_id'];
+
+// Consulta los datos del usuario
+$stmt = $conexion->prepare("SELECT username, email FROM usuarios WHERE id = ?");
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+if ($resultado->num_rows === 1) {
+    $usuario = $resultado->fetch_assoc();
+} else {
+    echo "Usuario no encontrado.";
+    exit;
+}
+$stmt->close();
+$conexion->close();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +55,16 @@
                     <a href="#" id="perfil-link">👤 Perfil</a>
                     <div class="perfil-menu" id="perfil-menu">
                         <div class="perfil-info">
-                            <h3 id="perfil-nombre">Juanjo20070113</h3>
-                            <p id="perfil-email">juanjolopin@gmail.com</p>
+                            <?php if (isset($usuario)): ?>
+                                <p id="perfil-username"><?php echo htmlspecialchars($usuario['username']); ?></p>
+                                <p id="perfil-email"><?php echo htmlspecialchars($usuario['email']); ?></p>
+                            <?php else: ?>
+                                <p id="perfil-username">Usuario no encontrado</p>
+                            <?php endif; ?>
                         </div>
                         <div class="perfil-opciones">
-                            <a id="configuracion" href="configuracion.html">⚙️ Configuracion</a>
-                            <a href="pagcentral.html" id="cerrar-sesion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 48 48"><g fill="none" stroke="#2c3e50" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M23.9917 6H6V42H24"/><path d="M33 33L42 24L33 15"/><path d="M16 23.9917H42"/></g></svg> Cerrar Sesión</a>
+                            <a id="configuracion" href="configuracion.php">⚙️ Configuracion</a>
+                            <a href="logout.php" id="cerrar-sesion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 48 48"><g fill="none" stroke="#2c3e50" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M23.9917 6H6V42H24"/><path d="M33 33L42 24L33 15"/><path d="M16 23.9917H42"/></g></svg> Cerrar Sesión</a>
                         </div>
                     </div>
                 </div>

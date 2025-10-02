@@ -29,8 +29,8 @@ header{
     height: 100vh;
 }
 form{
-    opacity: 0;
-    transition: opacity 1s;
+    /* opacity: 0; */
+    /* transition: opacity 1s; */
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;

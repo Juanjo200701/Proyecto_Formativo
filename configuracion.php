@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once 'conexion.php';
+
+$mensaje = '';
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +24,7 @@
                 <img src="imagenes/iconoecoturismo.jpg" width="70px" alt="Logo">
                 <h2 class="risaralda">RisaraldaEcoTurismo</h2>
             </div>
-            <a href="pagcentral2.html" class="volver">Volver</a>
+            <a href="pagcentral2.php" class="volver">Volver</a>
         </div>
     </header>
 
@@ -46,11 +56,19 @@
                 <div class="profile-info">
                     <div class="info-group">
                         <label>Nombre de Usuario</label>
-                        <p id="profile-username">Juanjo20071301</p>
+                        <?php if (isset($usuario)): ?>
+                                <p id="perfil-username"><?php echo htmlspecialchars($usuario['username']); ?></p>
+                            <?php else: ?>
+                                <p id="perfil-username">Usuario no encontrado</p>
+                            <?php endif; ?>
                     </div>
                     <div class="info-group">
                         <label>Correo Electrónico</label>
-                        <p id="profile-email">juanjolopin@gmail.com</p>
+                        <?php if (isset($usuario)): ?>
+                                <p id="perfil-email"><?php echo htmlspecialchars($usuario['email']); ?></p>
+                            <?php else: ?>
+                                <p id="perfil-username">Usuario no encontrado</p>
+                            <?php endif; ?>
                     </div>
                     <div class="info-group">
                         <label>Fecha de Registro</label>
