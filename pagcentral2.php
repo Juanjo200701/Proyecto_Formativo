@@ -44,7 +44,7 @@ $conexion->close();
             </div>
             <nav class="navbar">
                 <a class="catalogo" href="comentarios.html" id="catalogo-link">Reseñas</a>
-                <a class="contacto" href="contacto2.html">Contacto</a>
+                <a class="contacto" href="contacto2.php">Contacto</a>
                 <a href="#" id="lugares-link">Lugares</a>
                 <div class="menu-desplegable" id="menu-desplegable">
                     <a href="paraisosacuaticos2.html">🤽 Paraísos Acuáticos</a>

@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
     <div class="contenedor">
         <div class="login">
-            <form id="formulario" action="pagcentral2.php" method="POST">
+            <form id="formulario" action="registro.php" method="POST">
                 <h3>Regístrate...</h3>
                 <label for="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username" required>
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if (!empty($mensaje)): ?>
                     <div><?= $mensaje ?></div>
                 <?php endif; ?>
-                <p><strong>¿Ya tienes una cuenta?</strong><br><a href="login.html">Inicia Sesión</a></p>
+                <p><strong>¿Ya tienes una cuenta?</strong><br><a href="login.php">Inicia Sesión</a></p>
                 <button id="btn" type="submit">Ingresar</button>
             </form>
         </div>

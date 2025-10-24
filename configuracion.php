@@ -56,16 +56,16 @@ $mensaje = '';
                 <div class="profile-info">
                     <div class="info-group">
                         <label>Nombre de Usuario</label>
-                        <?php if (isset($usuario)): ?>
-                                <p id="perfil-username"><?php echo htmlspecialchars($usuario['username']); ?></p>
+                        <?php if (isset($username)): ?>
+                                <p id="perfil-username"><?php echo htmlspecialchars($username['username']); ?></p>
                             <?php else: ?>
                                 <p id="perfil-username">Usuario no encontrado</p>
                             <?php endif; ?>
                     </div>
                     <div class="info-group">
                         <label>Correo Electrónico</label>
-                        <?php if (isset($usuario)): ?>
-                                <p id="perfil-email"><?php echo htmlspecialchars($usuario['email']); ?></p>
+                        <?php if (isset($username)): ?>
+                                <p id="perfil-email"><?php echo htmlspecialchars($email['email']); ?></p>
                             <?php else: ?>
                                 <p id="perfil-username">Usuario no encontrado</p>
                             <?php endif; ?>
