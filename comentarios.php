@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +86,7 @@
     </div>
 </div>
 </section>
-<form action="mensajes">
+<form action="guardar_reseña.php" method="POST">
 <section class="comentaarios">
     <div class="input-container textarea focus">
         <textarea name="message" class="input" placeholder="Déjanos tu comentario: "></textarea>
@@ -90,7 +94,7 @@
     <input type="submit" value="Enviar" class="btn">
 </section>
 </form>
-<a href="pagcentral2.html" class="boton-volver">Volver</a>
+<a href="pagcentral2.php" class="boton-volver">Volver</a>
 </div>
 </body>
 </html>

@@ -5,6 +5,23 @@ require_once 'conexion.php';
 $mensaje = '';
 
 
+// Obtener datos del usuario en sesión (username, email, fecha_regsitro)
+$user = null;
+if (isset($_SESSION['usuario_id'])) {
+    $user_id = $_SESSION['usuario_id'];
+    $stmt = $conexion->prepare("SELECT username, email, fecha_registro FROM usuarios WHERE id = ?");
+    if ($stmt) {
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result && $result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+        }
+        $stmt->close();
+    }
+}
+
+
 ?>
 
 
@@ -56,23 +73,27 @@ $mensaje = '';
                 <div class="profile-info">
                     <div class="info-group">
                         <label>Nombre de Usuario</label>
-                        <?php if (isset($username)): ?>
-                                <p id="perfil-username"><?php echo htmlspecialchars($username['username']); ?></p>
+                        <?php if ($user): ?>
+                                <p id="perfil-username"><?php echo htmlspecialchars($user['username']); ?></p>
                             <?php else: ?>
                                 <p id="perfil-username">Usuario no encontrado</p>
                             <?php endif; ?>
                     </div>
                     <div class="info-group">
                         <label>Correo Electrónico</label>
-                        <?php if (isset($username)): ?>
-                                <p id="perfil-email"><?php echo htmlspecialchars($email['email']); ?></p>
+                        <?php if ($user): ?>
+                                <p id="perfil-email"><?php echo htmlspecialchars($user['email']); ?></p>
                             <?php else: ?>
-                                <p id="perfil-username">Usuario no encontrado</p>
+                                <p id="perfil-email">Correo no disponible</p>
                             <?php endif; ?>
                     </div>
                     <div class="info-group">
                         <label>Fecha de Registro</label>
-                        <p id="profile-date">18/04/2025</p>
+                        <?php if ($user && !empty($user['fecha_registro'])): ?>
+                            <p id="profile-date"><?php echo htmlspecialchars(date('d/m/Y', strtotime($user['fecha_registro']))); ?></p>
+                        <?php else: ?>
+                            <p id="profile-date">Fecha no disponible</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>

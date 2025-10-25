@@ -43,7 +43,7 @@ $conexion->close();
                 <h2 class="risaralda">RisaraldaEcoTurismo</h2>
             </div>
             <nav class="navbar">
-                <a class="catalogo" href="comentarios.html" id="catalogo-link">Reseñas</a>
+                <a class="catalogo" href="comentarios.php" id="catalogo-link">Reseñas</a>
                 <a class="contacto" href="contacto2.php">Contacto</a>
                 <a href="#" id="lugares-link">Lugares</a>
                 <div class="menu-desplegable" id="menu-desplegable">
